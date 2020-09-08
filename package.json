@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "concurrently \"yarn dev:server\" \"next dev\"",
+    "dev:server": "json-server --watch src/db.json --port 3004",
     "build": "next build",
     "start": "next start"
   },
