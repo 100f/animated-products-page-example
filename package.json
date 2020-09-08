@@ -8,6 +8,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "concurrently": "^5.3.0",
+    "json-server": "^0.16.1",
     "next": "9.5.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",
