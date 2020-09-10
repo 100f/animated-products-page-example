@@ -7,9 +7,7 @@ const Home: React.FC = () => {
       <Head>
         <title>Products</title>
       </Head>
-      <main>
-        <div>The Beginning...</div>
-      </main>
+      <main></main>
     </>
   );
 };

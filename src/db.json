@@ -5,49 +5,49 @@
       "name": "Product 1",
       "description": "Random description goes here",
       "price": 24.99,
-      "image_url": ""
+      "image_url": "http://localhost:3004/assets/images/"
     },
     {
       "id": 2,
       "name": "Product 2",
       "description": "Random description goes here",
       "price": 18.99,
-      "image_url": ""
+      "image_url": "http://localhost:3004/assets/images/"
     },
     {
       "id": 3,
       "name": "Product 3",
       "description": "Random description goes here",
       "price": 5.0,
-      "image_url": ""
+      "image_url": "http://localhost:3004/assets/images/"
     },
     {
       "id": 4,
       "name": "Product 4",
       "description": "Random description goes here",
       "price": 6.99,
-      "image_url": ""
+      "image_url": "http://localhost:3004/assets/images/"
     },
     {
       "id": 5,
       "name": "Product 5",
       "description": "Random description goes here",
       "price": 120.5,
-      "image_url": ""
+      "image_url": "http://localhost:3004/assets/images/"
     },
     {
       "id": 6,
       "name": "Product 6",
       "description": "Random description goes here",
       "price": 100.0,
-      "image_url": ""
+      "image_url": "http://localhost:3004/assets/images/"
     },
     {
       "id": 7,
       "name": "Product 7",
       "description": "Random description goes here",
       "price": 24.99,
-      "image_url": ""
+      "image_url": "http://localhost:3004/assets/images/"
     }
   ]
 }

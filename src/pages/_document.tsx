@@ -1,5 +1,14 @@
-import Document, { DocumentContext, DocumentInitialProps } from 'next/document';
+import React from 'react';
+import Document, {
+  DocumentContext,
+  DocumentInitialProps,
+  Html,
+  Head,
+  Main,
+  NextScript,
+} from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
+import { RenderPageResult } from 'next/dist/next-server/lib/utils';
 
 export default class MyDocument extends Document {
   static async getInitialProps(
@@ -9,7 +18,7 @@ export default class MyDocument extends Document {
     const originalRenderPage = ctx.renderPage;
 
     try {
-      ctx.renderPage = () =>
+      ctx.renderPage = (): Promise<RenderPageResult> | RenderPageResult =>
         originalRenderPage({
           enhanceApp: App => props => sheet.collectStyles(<App {...props} />),
         });
@@ -27,5 +36,21 @@ export default class MyDocument extends Document {
     } finally {
       sheet.seal();
     }
+  }
+  render() {
+    return (
+      <Html lang="pt-br">
+        <Head>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+            rel="stylesheet"
+          />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
   }
 }
