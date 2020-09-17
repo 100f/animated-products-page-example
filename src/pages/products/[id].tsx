@@ -1,7 +1,13 @@
-import React, { useEffect } from 'react';
-import { ScreenContainer } from '../../styles/product';
+import React from 'react';
+import { ScreenContainer } from '@styles/product';
 import { useRouter } from 'next/router';
-import { GetStaticProps, GetStaticPropsContext, GetStaticPaths } from 'next';
+import {
+  GetStaticProps,
+  GetStaticPropsContext,
+  GetStaticPaths,
+  InferGetStaticPropsType,
+} from 'next';
+import { ParsedUrlQuery } from 'querystring';
 
 import db from '../../db.json';
 
@@ -13,30 +19,27 @@ interface ProductProps {
   image_url?: string;
 }
 
-const Product: React.FC<ProductProps> = ({
-  id,
-  image_url,
-  name,
-  price,
-  description,
-}) => {
+const Product: React.FC = ({
+  product,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <ScreenContainer>
-      <div></div>
+      <div>{product.price}</div>
     </ScreenContainer>
   );
 };
 
 export const getStaticProps: GetStaticProps = async (
-  context: GetStaticPropsContext
+  context: GetStaticPropsContext<ProductProps & ParsedUrlQuery>
 ) => {
+  //Aqui dentro de fato é feita a query, para que o produto encontrado seja passado como prop da page
   const { id } = context.params;
-  const res = await fetch('http://localhost:3004/products');
-  const data = await res.json();
-  console.log(data);
+  const res = await fetch(`http://localhost:3004/products/${id}`);
+  const product: ProductProps = await res.json();
+
   return {
     props: {
-      data,
+      product,
     },
   };
 };
