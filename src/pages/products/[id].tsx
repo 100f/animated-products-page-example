@@ -1,11 +1,7 @@
 import React, { useEffect } from 'react';
 import { ScreenContainer } from '../../styles/product';
 import { useRouter } from 'next/router';
-import {
-  GetStaticProps,
-  GetStaticPropsContext,
-  GetStaticPathsResult,
-} from 'next';
+import { GetStaticProps, GetStaticPropsContext, GetStaticPaths } from 'next';
 
 import db from '../../db.json';
 
@@ -45,7 +41,7 @@ export const getStaticProps: GetStaticProps = async (
   };
 };
 
-export const getStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async () => {
   const { products } = db;
 
   return {
