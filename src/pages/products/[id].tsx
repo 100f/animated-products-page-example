@@ -1,7 +1,11 @@
 import React, { useEffect } from 'react';
 import { ScreenContainer } from '../../styles/product';
 import { useRouter } from 'next/router';
-import { GetStaticProps, InferGetStaticPropsType } from 'next';
+import {
+  GetStaticProps,
+  GetStaticPropsContext,
+  GetStaticPathsResult,
+} from 'next';
 
 import db from '../../db.json';
 
@@ -15,10 +19,10 @@ interface ProductProps {
 
 const Product: React.FC<ProductProps> = ({
   id,
-  name,
-  description,
-  price,
   image_url,
+  name,
+  price,
+  description,
 }) => {
   return (
     <ScreenContainer>
@@ -27,8 +31,10 @@ const Product: React.FC<ProductProps> = ({
   );
 };
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const { id } = params;
+export const getStaticProps: GetStaticProps = async (
+  context: GetStaticPropsContext
+) => {
+  const { id } = context.params;
   const res = await fetch('http://localhost:3004/products');
   const data = await res.json();
   console.log(data);
@@ -39,7 +45,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   };
 };
 
-export const getStaticPaths = () => {
+export const getStaticPaths = async () => {
   const { products } = db;
 
   return {
