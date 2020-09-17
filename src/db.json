@@ -2,10 +2,10 @@
   "products": [
     {
       "id": 1,
-      "name": "Product 1",
-      "description": "Random description goes here",
-      "price": 24.99,
-      "image_url": "http://localhost:3004/assets/images/"
+      "name": "Tênis All Star Converse Vermelho",
+      "description": "Tênis de cano alto, unissex.\nEstilo: Casual\nCadarço Simétrico\nForro Têxtil\nEntressola Emborrachada",
+      "price": 74.99,
+      "image_url": "/assets/images/all-star-vermelho.jpg"
     },
     {
       "id": 2,

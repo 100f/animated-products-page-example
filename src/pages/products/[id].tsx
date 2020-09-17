@@ -1,15 +1,21 @@
 import React from 'react';
-import { ScreenContainer } from '@styles/product';
-import { useRouter } from 'next/router';
+
+import {
+  ProductImage,
+  ProductInfoContainer,
+  ScreenContainer,
+} from '@styles/product';
 import {
   GetStaticProps,
   GetStaticPropsContext,
   GetStaticPaths,
   InferGetStaticPropsType,
 } from 'next';
-import { ParsedUrlQuery } from 'querystring';
 
+import { ParsedUrlQuery } from 'querystring';
 import db from '../../db.json';
+import PriceTag from '@components/priceTag';
+import AddToCartButton from '@components/roundedButton';
 
 interface ProductProps {
   id: number;
@@ -24,7 +30,18 @@ const Product: React.FC = ({
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <ScreenContainer>
-      <div>{product.price}</div>
+      <ProductImage src={product.image_url} alt="Imagem do Produto" />
+
+      <ProductInfoContainer>
+        <h1>{product.name}</h1>
+        <h4>{product.description}</h4>
+
+        <PriceTag price={product.price} />
+
+        <div>
+          <AddToCartButton>Adicionar ao Carrinho</AddToCartButton>
+        </div>
+      </ProductInfoContainer>
     </ScreenContainer>
   );
 };
