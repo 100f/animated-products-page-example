@@ -16,6 +16,7 @@ import { ParsedUrlQuery } from 'querystring';
 import db from '../../db.json';
 import PriceTag from '@components/priceTag';
 import AddToCartButton from '@components/roundedButton';
+import AmountSelector from '@components/amountSelector';
 
 interface ProductProps {
   id: number;
@@ -39,6 +40,7 @@ const Product: React.FC = ({
         <PriceTag price={product.price} />
 
         <div>
+          <AmountSelector />
           <AddToCartButton>Adicionar ao Carrinho</AddToCartButton>
         </div>
       </ProductInfoContainer>
