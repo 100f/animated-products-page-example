@@ -9,45 +9,38 @@
     },
     {
       "id": 2,
-      "name": "Product 2",
-      "description": "Random description goes here",
-      "price": 18.99,
-      "image_url": "http://localhost:3004/assets/images/"
+      "name": "Boné Nike SB Heritage Black",
+      "description": "Boné da linha SB, aba reta. \nCor: Preto. \nTecido: Algodão, Elastano e Poliamida. \nFeicho: Strapback. \nUnissex.",
+      "price": 69.99,
+      "image_url": "/assets/images/cap-nike-sb.jpg"
     },
     {
       "id": 3,
-      "name": "Product 3",
-      "description": "Random description goes here",
-      "price": 5.0,
-      "image_url": "http://localhost:3004/assets/images/"
+      "name": "Boné Trucker Onix",
+      "description": "Boné Trucker Onix, aba curva. \nCor: Preto. \nAplique Silkado e Bordado, tecido Suede preto. \nTamanho 58. \nUnissex.",
+      "price": 109.99,
+      "image_url": "/assets/images/cap-trucker-onix.jpg"
     },
     {
       "id": 4,
-      "name": "Product 4",
-      "description": "Random description goes here",
+      "name": "Carteira de Couro Genérica",
+      "description": "Carteira social simples com diversos bolsos. \nMaterial: Couro.",
       "price": 6.99,
-      "image_url": "http://localhost:3004/assets/images/"
+      "image_url": "/assets/images/carteira-couro.jpg"
     },
     {
       "id": 5,
-      "name": "Product 5",
-      "description": "Random description goes here",
-      "price": 120.5,
-      "image_url": "http://localhost:3004/assets/images/"
+      "name": "Cinto de Couro Social",
+      "description": "Cinto social preto, masculino. \nMaterial: Couro. \n",
+      "price": 19.9,
+      "image_url": "/assets/images/cinto-social.jpg"
     },
     {
       "id": 6,
-      "name": "Product 6",
-      "description": "Random description goes here",
-      "price": 100.0,
-      "image_url": "http://localhost:3004/assets/images/"
-    },
-    {
-      "id": 7,
-      "name": "Product 7",
-      "description": "Random description goes here",
-      "price": 24.99,
-      "image_url": "http://localhost:3004/assets/images/"
+      "name": "Óculos de Grau Ray Ban Round Metal Optics",
+      "description": "Os óculos de grau Ray-Ban® Round Metal são totalmente retrô. Este modelo foi usado por lendas da música e inspirado na contracultura dos anos 60 - quando foi criado. \nTipo de Material da Armação: Metal. \nCor da Armação: Chumbo",
+      "price": 520.0,
+      "image_url": "/assets/images/ray-ban-round-metal-optics.jpg"
     }
   ]
 }
