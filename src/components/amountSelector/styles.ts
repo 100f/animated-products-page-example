@@ -4,10 +4,11 @@ export const SelectorContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
 
   width: 80px;
   height: 60px;
+
+  margin-right: 24px;
 
   border: 1px solid #8c81d0;
   border-radius: 10px;
@@ -28,6 +29,8 @@ export const SelectorContainer = styled.div`
     margin-top: 3px;
   }
   div.amount {
+    position: relative;
+
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -41,11 +44,13 @@ export const SelectorContainer = styled.div`
     margin-left: 14px;
 
     div.arrows {
+      position: absolute;
+      right: 8px;
+
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin-left: 22px;
     }
   }
 `;

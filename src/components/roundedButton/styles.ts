@@ -14,9 +14,10 @@ export const RoundedButton = styled.button`
 
   padding: 19px 35px;
 
+  opacity: 1;
+  transition: opacity, 0.3s;
+
   :hover {
-    border: 2px solid #8c81d0;
-    color: #8c81d0;
-    background-color: #fff;
+    opacity: 0.75;
   }
 `;

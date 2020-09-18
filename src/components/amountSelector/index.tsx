@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   MdKeyboardArrowDown as ArrowDown,
   MdKeyboardArrowUp as ArrowUp,
@@ -6,7 +6,7 @@ import {
 import { SelectorContainer } from './styles';
 
 const AmountSelector: React.FC = () => {
-  const amount = 1;
+  const [amount, setAmount] = useState(1);
 
   return (
     <SelectorContainer>
@@ -14,12 +14,14 @@ const AmountSelector: React.FC = () => {
       <div className="amount">
         {amount}
         <div className="arrows">
-          <div className="increase">
-            <ArrowUp size={16} />
-          </div>
-          <div className="decrease">
-            <ArrowDown size={16} />
-          </div>
+          <ArrowUp
+            size={16}
+            onClick={() => amount < 99 && setAmount(prev => prev + 1)}
+          />
+          <ArrowDown
+            size={16}
+            onClick={() => amount > 1 && setAmount(prev => prev - 1)}
+          />
         </div>
       </div>
     </SelectorContainer>

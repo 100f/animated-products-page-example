@@ -39,7 +39,7 @@ const Product: React.FC = ({
 
         <PriceTag price={product.price} />
 
-        <div>
+        <div className="options">
           <AmountSelector />
           <AddToCartButton>Adicionar ao Carrinho</AddToCartButton>
         </div>

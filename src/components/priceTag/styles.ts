@@ -2,11 +2,13 @@ import styled from 'styled-components';
 
 export const PriceContainer = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+
   width: 126px;
   height: 53px;
+  padding: 9px 13px;
+
   background-color: #e2e5ff;
   border-radius: 13px;
 `;
