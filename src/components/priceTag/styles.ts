@@ -5,7 +5,7 @@ export const PriceContainer = styled.div`
   justify-content: space-evenly;
   align-items: center;
 
-  width: 126px;
+  width: fit-content;
   height: 53px;
   padding: 9px 13px;
 
