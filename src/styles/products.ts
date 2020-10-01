@@ -28,8 +28,9 @@ export const ScreenContainer = styled.main`
 export const ProductsContainer = styled.ul`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 48px;
-  margin-top: 104px;
+  grid-column-gap: 102px;
+  grid-row-gap: 53px;
+  margin-top: 70px;
 
   font-family: 'Roboto', sans-serif;
 `;
@@ -41,8 +42,8 @@ export const ProductCard = styled.li`
   align-items: center;
   position: relative;
 
-  width: 358px;
-  height: 508px;
+  width: 231px;
+  height: 330px;
 
   padding-left: 50px;
   padding-right: 50px;
@@ -63,27 +64,27 @@ export const ProductCard = styled.li`
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 52px;
+    top: 34px;
     left: 0px;
 
     width: fit-content;
-    height: 57px;
+    height: 37px;
 
-    padding-right: 19px;
-    padding-left: 15px;
+    padding-right: 13px;
+    padding-left: 10px;
 
-    border-radius: 0px 15px 15px 0px;
+    border-radius: 0px 12px 12px 0px;
 
     font-family: 'Roboto', sans-serif;
-    font-size: 36px;
+    font-size: 24px;
     font-weight: bold;
 
     background-color: #e2e5ff;
     color: #8c81d0;
 
     span {
-      margin-right: 6.5px;
-      font-size: 13px;
+      margin-right: 4px;
+      font-size: 9px;
       color: #8c8c8c;
     }
   }
@@ -94,7 +95,8 @@ export const ProductCard = styled.li`
     justify-content: center;
 
     height: 100%;
-    margin-top: 140px;
+    width: 100%;
+    margin-top: 97px;
     margin-bottom: 50px;
 
     img {
@@ -103,7 +105,7 @@ export const ProductCard = styled.li`
     }
     h3 {
       font-family: 'Roboto', sans-serif;
-      font-size: 36px;
+      font-size: 18px;
       font-weight: bold;
 
       color: #424347;
