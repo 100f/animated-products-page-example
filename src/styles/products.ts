@@ -3,34 +3,45 @@ import styled from 'styled-components';
 export const ScreenContainer = styled.main`
   display: flex;
   flex-direction: column;
+
   align-items: center;
 
-  padding-bottom: 50px;
+  padding-bottom: 5rem;
 
   background-color: #f9f8fc;
 
   header {
     align-self: flex-start;
-    margin-top: 90px;
-    margin-left: 137px;
+    margin-top: 9rem;
+    margin-left: 10.3%;
+    margin-bottom: 7rem;
 
     font-family: 'Rambla', sans-serif;
-    font-size: 64px;
+    font-size: 6.4rem;
     font-weight: bold;
+
     color: #424347;
+
+    @media (max-width: 700px) {
+      align-self: center;
+      margin-left: 0;
+    }
   }
 
   a {
+    justify-content: center;
     text-decoration: none;
   }
 `;
 
 export const ProductsContainer = styled.ul`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 102px;
-  grid-row-gap: 53px;
-  margin-top: 70px;
+  grid-template-columns: repeat(auto-fit, minmax(23.1rem, 1fr));
+  justify-items: center; /*prop principal para centralizar li dentro de ul*/
+
+  grid-row-gap: 5.3rem;
+
+  width: 65.88%;
 
   font-family: 'Roboto', sans-serif;
 `;
@@ -42,21 +53,20 @@ export const ProductCard = styled.li`
   align-items: center;
   position: relative;
 
-  width: 231px;
-  height: 330px;
+  width: 23.1rem;
+  height: 33rem;
 
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 0 5rem;
 
-  border-radius: 50px;
+  border-radius: 5rem;
   list-style: none;
 
   background-color: #fff;
 
   :hover {
-    -webkit-box-shadow: 0px 0px 35px -9px #9489ab;
-    -moz-box-shadow: 0px 0px 35px -9px #9489ab;
-    box-shadow: 0px 0px 35px -9px #9489ab;
+    -webkit-box-shadow: 0rem 0rem 3.5rem -0.9rem #9489ab;
+    -moz-box-shadow: 0rem 0rem 3.5rem -0.9rem #9489ab;
+    box-shadow: 0px 0rem 3.5rem -0.9rem #9489ab;
   }
 
   div.price-tag {
@@ -64,27 +74,27 @@ export const ProductCard = styled.li`
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 34px;
-    left: 0px;
+    top: 3.4rem;
+    left: 0rem;
 
     width: fit-content;
-    height: 37px;
+    height: 3.7rem;
 
-    padding-right: 13px;
-    padding-left: 10px;
+    padding-right: 1.3rem;
+    padding-left: 1rem;
 
-    border-radius: 0px 12px 12px 0px;
+    border-radius: 0px 1.2rem 1.2rem 0px;
 
     font-family: 'Roboto', sans-serif;
-    font-size: 24px;
+    font-size: 2.4rem;
     font-weight: bold;
 
     background-color: #e2e5ff;
     color: #8c81d0;
 
     span {
-      margin-right: 4px;
-      font-size: 9px;
+      margin-right: 0.4rem;
+      font-size: 0.9rem;
       color: #8c8c8c;
     }
   }
@@ -96,16 +106,16 @@ export const ProductCard = styled.li`
 
     height: 100%;
     width: 100%;
-    margin-top: 97px;
-    margin-bottom: 50px;
+    margin: 1.5rem 0;
 
     img {
       width: 100%;
       height: auto;
     }
     h3 {
+      margin-top: 3rem;
       font-family: 'Roboto', sans-serif;
-      font-size: 18px;
+      font-size: 1.8rem;
       font-weight: bold;
 
       color: #424347;

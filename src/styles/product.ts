@@ -8,8 +8,8 @@ export const ScreenContainer = styled.div`
   align-items: center;
 `;
 export const ProductImage = styled.img`
-  width: 500px;
-  height: 442px;
+  width: 50rem;
+  height: 44.2rem;
 `;
 
 export const ProductInfoContainer = styled.div`
@@ -18,31 +18,31 @@ export const ProductInfoContainer = styled.div`
   justify-content: center;
   align-items: flex-start;
 
-  width: 450px;
-  height: 402px;
+  width: 45rem;
+  height: 40.2rem;
 
   h1 {
     font-family: 'Rambla', sans-serif;
-    font-size: 48px;
+    font-size: 4.8rem;
     font-weight: bold;
 
     color: #424347;
 
-    margin-bottom: 16px;
+    margin-bottom: 1.6rem;
   }
 
   h4 {
     font-family: 'Roboto', sans-serif;
     font-weight: normal;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
 
     color: #8c8c8c;
 
-    margin-bottom: 25px;
+    margin-bottom: 2.5rem;
   }
   div.options {
     display: flex;
-    margin-top: 36px;
+    margin-top: 3.6rem;
   }
 `;

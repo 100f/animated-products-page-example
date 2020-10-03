@@ -7,7 +7,6 @@ import { InferGetStaticPropsType } from 'next';
 
 import Link from 'next/link';
 
-import GlobalStyle from '@styles/global';
 import {
   ProductCard,
   ProductsContainer,
@@ -19,17 +18,16 @@ const Homepage: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
 }) => {
   return (
     <>
-      <GlobalStyle />
       <Head>
-        <title>Products</title>
+        <title>Produtos</title>
       </Head>
       <ScreenContainer>
         <header>Produtos</header>
         <ProductsContainer>
           {products.map(product => (
-            <Link href={`/products/${product.id}`}>
-              <a>
-                <ProductCard key={product.id}>
+            <ProductCard key={product.id}>
+              <Link href={`/products/${product.id}`} key={product.id}>
+                <a>
                   <div className="price-tag">
                     <span>R$ </span>
                     {product.price}
@@ -38,9 +36,9 @@ const Homepage: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
                     <img src={product.image_url} alt="Produto" />
                     <h3>{product.name}</h3>
                   </div>
-                </ProductCard>
-              </a>
-            </Link>
+                </a>
+              </Link>
+            </ProductCard>
           ))}
         </ProductsContainer>
       </ScreenContainer>
