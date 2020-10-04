@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const ScreenContainer = styled.main`
   display: flex;
@@ -34,7 +35,7 @@ export const ScreenContainer = styled.main`
   }
 `;
 
-export const ProductsContainer = styled.ul`
+export const ProductsContainer = styled(motion.ul)`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(23.1rem, 1fr));
   justify-items: center; /*prop principal para centralizar li dentro de ul*/
@@ -46,7 +47,7 @@ export const ProductsContainer = styled.ul`
   font-family: 'Roboto', sans-serif;
 `;
 
-export const ProductCard = styled.li`
+export const ProductCard = styled(motion.li)`
   display: flex;
   flex-direction: column;
   justify-content: center;

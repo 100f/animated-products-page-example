@@ -13,6 +13,19 @@ import {
   ScreenContainer,
 } from '@styles/products';
 
+const list = {
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.2 },
+  },
+  hidden: { opacity: 0 },
+};
+
+const item = {
+  visible: { opacity: 1, y: 0 },
+  hidden: { opacity: 0, y: -100 },
+};
+
 const Homepage: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
   products,
 }) => {
@@ -23,9 +36,9 @@ const Homepage: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
       </Head>
       <ScreenContainer>
         <header>Produtos</header>
-        <ProductsContainer>
-          {products.map(product => (
-            <ProductCard key={product.id}>
+        <ProductsContainer initial="hidden" animate="visible" variants={list}>
+          {products.map((product, i) => (
+            <ProductCard key={product.id} variants={item}>
               <Link href={`/products/${product.id}`} key={product.id}>
                 <a>
                   <div className="price-tag">
