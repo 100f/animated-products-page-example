@@ -2,6 +2,8 @@ import React from 'react';
 import { ParsedUrlQuery } from 'querystring';
 import { GetStaticPropsContext, InferGetStaticPropsType } from 'next';
 
+import Head from 'next/head';
+
 import { Product } from '../../shared/types';
 
 import {
@@ -20,9 +22,9 @@ const ProductPage: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
 }) => {
   return (
     <>
-      <head>
+      <Head>
         <title>{product.name}</title>
-      </head>
+      </Head>
 
       <ScreenContainer>
         <ProductImage src={product.image_url} alt="Imagem do Produto" />
