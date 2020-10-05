@@ -1,11 +1,12 @@
 import React from 'react';
-import Head from 'next/head';
 
-import { Product } from '../shared/types';
+import Head from 'next/head';
+import Link from 'next/link';
 
 import { InferGetStaticPropsType } from 'next';
+import { Product } from '../shared/types';
 
-import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 import {
   ProductCard,
@@ -13,18 +14,7 @@ import {
   ScreenContainer,
 } from '@styles/products';
 
-const list = {
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.2 },
-  },
-  hidden: { opacity: 0 },
-};
-
-const item = {
-  visible: { opacity: 1, y: 0 },
-  hidden: { opacity: 0, y: -100 },
-};
+import { list, listItem, listItemHover, title } from 'src/animations';
 
 const Homepage: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
   products,
@@ -35,10 +25,16 @@ const Homepage: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
         <title>Produtos</title>
       </Head>
       <ScreenContainer>
-        <header>Produtos</header>
+        <motion.header initial="hidden" animate="visible" variants={title}>
+          Produtos
+        </motion.header>
         <ProductsContainer initial="hidden" animate="visible" variants={list}>
-          {products.map((product, i) => (
-            <ProductCard key={product.id} variants={item}>
+          {products.map(product => (
+            <ProductCard
+              key={product.id}
+              variants={listItem}
+              whileHover={listItemHover}
+            >
               <Link href={`/products/${product.id}`} key={product.id}>
                 <a>
                   <div className="price-tag">
