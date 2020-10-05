@@ -1,10 +1,14 @@
 import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+
 import { ParsedUrlQuery } from 'querystring';
 import { GetStaticPropsContext, InferGetStaticPropsType } from 'next';
 
-import Head from 'next/head';
+import { motion } from 'framer-motion';
 
 import { Product } from '../../shared/types';
+import { MdArrowBack as Back } from 'react-icons/md';
 
 import {
   ProductImage,
@@ -21,26 +25,41 @@ const ProductPage: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
   product,
 }) => {
   return (
-    <>
+    <motion.div exit={{ opacity: 0 }}>
       <Head>
         <title>{product.name}</title>
       </Head>
 
       <ScreenContainer>
-        <ProductImage src={product.image_url} alt="Imagem do Produto" />
-        <ProductInfoContainer>
-          <h1>{product.name}</h1>
-          <h4>{product.description}</h4>
+        <motion.div
+          className="back"
+          whileHover={{ x: 5, opacity: 0.7 }}
+          whileTap={{ x: 2, opacity: 0.6 }}
+        >
+          <Link href="/">
+            <a>
+              <Back size="2.3rem" color="#424347" />
+              <h3>Voltar</h3>
+            </a>
+          </Link>
+        </motion.div>
 
-          <PriceTag price={product.price} />
+        <div className="product">
+          <ProductImage src={product.image_url} alt="Imagem do Produto" />
+          <ProductInfoContainer>
+            <h1>{product.name}</h1>
+            <h4>{product.description}</h4>
 
-          <div className="options">
-            <AmountSelector />
-            <AddToCartButton>Adicionar ao Carrinho</AddToCartButton>
-          </div>
-        </ProductInfoContainer>
+            <PriceTag price={product.price} />
+
+            <div className="options">
+              <AmountSelector />
+              <AddToCartButton>Adicionar ao Carrinho</AddToCartButton>
+            </div>
+          </ProductInfoContainer>
+        </div>
       </ScreenContainer>
-    </>
+    </motion.div>
   );
 };
 

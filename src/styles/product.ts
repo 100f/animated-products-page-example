@@ -2,14 +2,47 @@ import styled from 'styled-components';
 
 export const ScreenContainer = styled.div`
   display: flex;
-  width: 100vw;
-  height: 100vh;
-  justify-content: space-evenly;
+  flex-direction: column;
   align-items: center;
 
-  @media (max-width: 1070px) {
-    flex-direction: column;
-    justify-content: space-between;
+  div.back {
+    align-self: flex-start;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin-left: 15%;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+
+    a {
+      display: flex;
+      text-decoration: none;
+
+      h3 {
+        margin-left: 1.2rem;
+        font-family: 'Roboto', sans-serif;
+        font-size: 2.3rem;
+        font-weight: bold;
+        color: #424347;
+
+        @media (max-width: 320px) {
+          display: none;
+        }
+      }
+    }
+  }
+  div.product {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+
+    @media (max-width: 1070px) {
+      flex-direction: column;
+      justify-content: space-between;
+    }
   }
 `;
 

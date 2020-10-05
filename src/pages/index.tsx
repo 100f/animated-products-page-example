@@ -20,7 +20,7 @@ const Homepage: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
   products,
 }) => {
   return (
-    <>
+    <motion.div exit={{ opacity: 0 }}>
       <Head>
         <title>Produtos</title>
       </Head>
@@ -51,7 +51,7 @@ const Homepage: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
           ))}
         </ProductsContainer>
       </ScreenContainer>
-    </>
+    </motion.div>
   );
 };
 
