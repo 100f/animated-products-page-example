@@ -49,14 +49,15 @@ __3.__ To install it, immediately throw the following commands in your terminal 
   ```
 __4.__ To actually test it, after making sure you're in the directory's root folder, throw the following command in your terminal to run in dev mode:
 - npm
-```sh
-$ npm run dev
-```
+
+  ```sh
+  $ npm run dev
+  ```
 - Yarn
 
-```sh
-$ yarn dev
-```
+  ```sh
+  $ yarn dev
+  ```
 
 __4.__ Just run the project in your :globe_with_meridians: browser! It runs at port __3000__, so just access `http://localhost:3000` and give it a try. Cheers!
 
