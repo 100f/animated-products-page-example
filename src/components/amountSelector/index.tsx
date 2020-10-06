@@ -8,11 +8,13 @@ import {
 } from 'react-icons/md';
 import { SelectorContainer } from './styles';
 
-const AmountSelector: React.FC<AnimationProps> = () => {
+const AmountSelector: React.FC<AnimationProps | any> = ({
+  ...AnimationProps
+}) => {
   const [amount, setAmount] = useState<number>(1);
 
   return (
-    <SelectorContainer>
+    <SelectorContainer {...AnimationProps}>
       <div className="quantity-text">Qtd.</div>
       <div className="amount">
         {amount}

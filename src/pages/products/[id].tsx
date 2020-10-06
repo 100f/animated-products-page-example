@@ -21,7 +21,7 @@ import PriceTag from '@components/PriceTag';
 import AddToCartButton from '@components/RoundedButton';
 import AmountSelector from '@components/AmountSelector';
 
-import { fadeIn, fadeRight, stagger } from 'src/animations';
+import { fadeIn, fadeInDown, fadeRight, stagger, title } from 'src/animations';
 
 const ProductPage: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
   product,
@@ -38,6 +38,9 @@ const ProductPage: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
 
       <ScreenContainer>
         <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={title}
           className="back"
           whileHover={{ x: 5, opacity: 0.7 }}
           whileTap={{ x: 2, opacity: 0.6 }}
@@ -50,12 +53,7 @@ const ProductPage: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
           </Link>
         </motion.div>
 
-        <motion.div
-          className="product"
-          initial="hidden"
-          animate="visible"
-          variants={stagger(2)}
-        >
+        <motion.div className="product">
           <ProductImage
             src={product.image_url}
             alt="Imagem do Produto"
@@ -74,9 +72,28 @@ const ProductPage: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
 
             <PriceTag price={product.price} variants={fadeRight} />
 
-            <motion.div className="options">
-              <AmountSelector />
-              <AddToCartButton>Adicionar ao Carrinho</AddToCartButton>
+            <motion.div
+              className="options"
+              animate={{
+                transition: {
+                  duration: 0.5,
+                  staggerChildren: 0.5,
+                  delayChildren: 1.5,
+                },
+              }}
+            >
+              <AmountSelector
+                initial="hidden"
+                animate="visible"
+                variants={fadeInDown}
+              />
+              <AddToCartButton
+                initial="hidden"
+                animate="visible"
+                variants={fadeInDown}
+              >
+                Adicionar ao Carrinho
+              </AddToCartButton>
             </motion.div>
           </ProductInfoContainer>
         </motion.div>

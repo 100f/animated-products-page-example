@@ -32,7 +32,10 @@ export const stagger = (delay: number) => {
   return {
     visible: {
       opacity: 1,
-      transition: { staggerChildren: delay },
+      transition: {
+        staggerChildren: delay,
+        delayChildren: 1.7,
+      },
     },
     hidden: { opacity: 0 },
   };
@@ -54,6 +57,18 @@ export const fadeRight = {
 };
 
 export const fadeIn = {
-  visible: { opacity: 1, transition: { duration: 0.5 } },
+  visible: { opacity: 1, transition: { duration: 0.5, delay: 1 } },
   hidden: { opacity: 0 },
+};
+
+export const fadeInDown = {
+  hidden: { opacity: 0, y: -50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.3,
+      delay: 2,
+    },
+  },
 };
