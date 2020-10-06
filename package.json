@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "concurrently \"yarn dev:server\" \"next dev\"",
     "dev:server": "json-server --watch src/db.json --port 3004",
-    "build": "next build",
-    "start": "next start"
+    "build": "concurrently \"yarn dev:server\" \"next build\"",
+    "start": "concurrently \"yarn dev:server\" \"next start\""
   },
   "dependencies": {
     "concurrently": "^5.3.0",
