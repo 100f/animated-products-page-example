@@ -19,14 +19,14 @@
       "name": "Boné Trucker Onix",
       "description": "Boné Trucker Onix, aba curva. \nCor: Preto. \nAplique Silkado e Bordado, tecido Suede preto. \nTamanho 58. \nUnissex.",
       "price": 109.99,
-      "image_url": "/assets/images/cap-trucker-onix.jpg"
+      "image_url": "/assets/images/bone-trucker-onix.jpg"
     },
     {
       "id": 4,
-      "name": "Carteira de Couro Genérica",
-      "description": "Carteira social simples com diversos bolsos. \nMaterial: Couro.",
-      "price": 6.99,
-      "image_url": "/assets/images/carteira-couro.jpg"
+      "name": "Smartwatch T70 Rosa",
+      "description": "Relógio digital inteligente, Motorola T70. \nPulseira também disponível na cor preta.",
+      "price": 170.0,
+      "image_url": "/assets/images/smartwatch-t70.jpg"
     },
     {
       "id": 5,
