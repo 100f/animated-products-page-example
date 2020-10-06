@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const RoundedButton = styled.button`
+export const RoundedButton = styled(motion.button)`
   width: 250px;
   height: 60px;
   background-color: #8c81d0;

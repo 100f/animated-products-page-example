@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const SelectorContainer = styled.div`
+export const SelectorContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: center;

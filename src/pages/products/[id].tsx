@@ -2,10 +2,10 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
+import { motion } from 'framer-motion';
+
 import { ParsedUrlQuery } from 'querystring';
 import { GetStaticPropsContext, InferGetStaticPropsType } from 'next';
-
-import { motion } from 'framer-motion';
 
 import { Product } from '../../shared/types';
 import { MdArrowBack as Back } from 'react-icons/md';
@@ -21,11 +21,17 @@ import PriceTag from '@components/PriceTag';
 import AddToCartButton from '@components/RoundedButton';
 import AmountSelector from '@components/AmountSelector';
 
+import { fadeIn, fadeRight, stagger } from 'src/animations';
+
 const ProductPage: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
   product,
 }) => {
   return (
-    <motion.div exit={{ opacity: 0 }}>
+    <motion.div
+      exit={{ opacity: 0 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+    >
       <Head>
         <title>{product.name}</title>
       </Head>
@@ -44,20 +50,36 @@ const ProductPage: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
           </Link>
         </motion.div>
 
-        <div className="product">
-          <ProductImage src={product.image_url} alt="Imagem do Produto" />
-          <ProductInfoContainer>
-            <h1>{product.name}</h1>
-            <h4>{product.description}</h4>
+        <motion.div
+          className="product"
+          initial="hidden"
+          animate="visible"
+          variants={stagger(2)}
+        >
+          <ProductImage
+            src={product.image_url}
+            alt="Imagem do Produto"
+            initial="hidden"
+            animate="visible"
+            variants={fadeIn}
+          />
 
-            <PriceTag price={product.price} />
+          <ProductInfoContainer
+            initial="hidden"
+            animate="visible"
+            variants={stagger(0.12)}
+          >
+            <motion.h1 variants={fadeRight}>{product.name}</motion.h1>
+            <motion.h4 variants={fadeRight}>{product.description}</motion.h4>
 
-            <div className="options">
+            <PriceTag price={product.price} variants={fadeRight} />
+
+            <motion.div className="options">
               <AmountSelector />
               <AddToCartButton>Adicionar ao Carrinho</AddToCartButton>
-            </div>
+            </motion.div>
           </ProductInfoContainer>
-        </div>
+        </motion.div>
       </ScreenContainer>
     </motion.div>
   );

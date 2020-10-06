@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const PriceContainer = styled.div`
+export const PriceContainer = styled(motion.div)`
   display: flex;
   justify-content: flex-start;
   align-items: center;

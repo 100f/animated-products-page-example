@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const ScreenContainer = styled.div`
+export const ScreenContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,7 +47,7 @@ export const ScreenContainer = styled.div`
   }
 `;
 
-export const ProductImage = styled.img`
+export const ProductImage = styled(motion.img)`
   width: 50rem;
   height: 44.2rem;
 
@@ -65,7 +66,7 @@ export const ProductImage = styled.img`
   }
 `;
 
-export const ProductInfoContainer = styled.div`
+export const ProductInfoContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: center;

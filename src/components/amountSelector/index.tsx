@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
+
+import { AnimationProps } from 'framer-motion';
+
 import {
   MdKeyboardArrowDown as ArrowDown,
   MdKeyboardArrowUp as ArrowUp,
 } from 'react-icons/md';
 import { SelectorContainer } from './styles';
 
-const AmountSelector: React.FC = () => {
-  const [amount, setAmount] = useState(1);
+const AmountSelector: React.FC<AnimationProps> = () => {
+  const [amount, setAmount] = useState<number>(1);
 
   return (
     <SelectorContainer>

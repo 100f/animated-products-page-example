@@ -27,3 +27,33 @@ export const title = {
   },
   hidden: { opacity: 0, y: -80 },
 };
+
+export const stagger = (delay: number) => {
+  return {
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: delay },
+    },
+    hidden: { opacity: 0 },
+  };
+};
+
+export const fadeRight = {
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.5,
+      ease: [0.6, -0.05, 0.01, 0.92],
+    },
+  },
+  hidden: {
+    opacity: 0,
+    x: -80,
+  },
+};
+
+export const fadeIn = {
+  visible: { opacity: 1, transition: { duration: 0.5 } },
+  hidden: { opacity: 0 },
+};
