@@ -12,7 +12,7 @@ const PriceTag: React.FC<PriceProps & AnimationProps> = ({
 }) => (
   <PriceContainer {...AnimationProps}>
     <MoneySign>R$</MoneySign>
-    <PriceValue>{price}</PriceValue>
+    <PriceValue>{price.toFixed(2)}</PriceValue>
   </PriceContainer>
 );
 

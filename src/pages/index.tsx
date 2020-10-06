@@ -43,7 +43,7 @@ const Homepage: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
                 <a>
                   <div className="price-tag">
                     <span>R$ </span>
-                    {product.price}
+                    {product.price.toFixed(2)}
                   </div>
                   <div className="img-name">
                     <img src={product.image_url} alt="Produto" />
