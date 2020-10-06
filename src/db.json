@@ -16,10 +16,10 @@
     },
     {
       "id": 3,
-      "name": "Boné Trucker Onix",
-      "description": "Boné Trucker Onix, aba curva. \nCor: Preto. \nAplique Silkado e Bordado, tecido Suede preto. \nTamanho 58. \nUnissex.",
-      "price": 109.99,
-      "image_url": "/assets/images/bone-trucker-onix.jpg"
+      "name": "Bolsa Feminina Lorena com Alça Removível",
+      "description": "Kit de Bolsa + Carteira. \nPossui alça para uso transversal. \nCouro Sintético. \nBolsa: Alt: 20cm Larg: 25cm Comp: 10cm. \nCarteira: Alt: 10cm Larg: 19cm Prof: 1,5cm.",
+      "price": 119.99,
+      "image_url": "/assets/images/bolsa-lorena.jpg"
     },
     {
       "id": 4,
@@ -30,10 +30,10 @@
     },
     {
       "id": 5,
-      "name": "Cinto de Couro Social",
-      "description": "Cinto social preto, masculino. \nMaterial: Couro. \n",
+      "name": "Cinto John John Gui Masculino",
+      "description": "Cinto social preto, masculino. \nOs acessórios são opções certeiras para trazer ainda mais personalidade e estilo ao look, aposte no Cinto Gui para complementar o visual. \nMaterial: Couro. \n",
       "price": 19.9,
-      "image_url": "/assets/images/cinto-social.jpg"
+      "image_url": "/assets/images/cinto-masculino.jpg"
     },
     {
       "id": 6,

@@ -112,6 +112,7 @@ export const ProductCard = styled(motion.li)`
     img {
       width: 100%;
       height: auto;
+      max-height: 11.5rem;
     }
     h3 {
       margin-top: 3rem;
