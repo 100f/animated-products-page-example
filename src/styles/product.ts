@@ -20,6 +20,12 @@ export const ScreenContainer = styled(motion.div)`
       display: flex;
       text-decoration: none;
 
+      .backIcon {
+        @media (max-width: 500px) {
+          width: 3.2rem;
+          height: 3.2rem;
+        }
+      }
       h3 {
         margin-left: 1.2rem;
         font-family: 'Roboto', sans-serif;
@@ -27,10 +33,15 @@ export const ScreenContainer = styled(motion.div)`
         font-weight: bold;
         color: #424347;
 
-        @media (max-width: 320px) {
+        @media (max-width: 500px) {
           display: none;
         }
       }
+    }
+
+    @media (max-width: 500px) {
+      margin-left: 0;
+      align-self: center;
     }
   }
   div.product {

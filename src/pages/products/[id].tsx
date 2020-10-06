@@ -47,7 +47,7 @@ const ProductPage: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
         >
           <Link href="/">
             <a>
-              <Back size="2.3rem" color="#424347" />
+              <Back className="backIcon" size="2.3rem" color="#424347" />
               <h3>Voltar</h3>
             </a>
           </Link>
