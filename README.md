@@ -59,7 +59,7 @@ __4.__ To actually test it, after making sure you're in the directory's root fol
   $ yarn dev
   ```
 
-__4.__ Just run the project in your :globe_with_meridians: browser! It runs at port __3000__, so just access `http://localhost:3000` and give it a try. Cheers!
+__5.__ Just run the project in your :globe_with_meridians: browser! It runs at port __3000__, so just access `http://localhost:3000` and give it a try. Cheers!
 
 <hr>
 <br>
